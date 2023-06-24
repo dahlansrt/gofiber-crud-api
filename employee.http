@@ -1,0 +1,36 @@
+@hostname = 127.0.0.1
+@port = 3000
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+### Get All Employee
+GET http://{{host}}/employee
+Content-Type: {{contentType}}
+
+### Get Employee By Id
+GET http://{{host}}/employee/6496a4a47b42c236e0507d8a
+Content-Type: {{contentType}}
+
+### Post Employee
+POST http://{{host}}/employee
+Content-Type: {{contentType}}
+
+{
+    "name": "Bob",
+    "salary": 2000,
+    "age":35
+}
+
+### Put Employee By Id
+PUT http://{{host}}/employee/6496a4a47b42c236e0507d8a
+Content-Type: {{contentType}}
+
+{
+    "name": "Mikey",
+    "salary": 2001,
+    "age":35
+}
+
+### Delete Employee By Id
+DELETE  http://{{host}}/employee/6496a9be91711e8b54654579
+Content-Type: {{contentType}}
