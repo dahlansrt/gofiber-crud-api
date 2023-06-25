@@ -1,18 +1,19 @@
 @hostname = 127.0.0.1
 @port = 3000
 @host = {{hostname}}:{{port}}
+@path=movie
 @contentType = application/json
 
-### Get All Employee
-GET http://{{host}}/employee
+### Get All Movie
+GET http://{{host}}/{{path}}
 Content-Type: {{contentType}}
 
-### Get Employee By Id
-GET http://{{host}}/employee/6496a4a47b42c236e0507d8a
+### Get Movie By Id
+GET http://{{host}}/{{path}}/6496a4a47b42c236e0507d8a
 Content-Type: {{contentType}}
 
-### Post Employee
-POST http://{{host}}/employee
+### Post Movie
+POST http://{{host}}/{{path}}
 Content-Type: {{contentType}}
 
 {
@@ -21,8 +22,8 @@ Content-Type: {{contentType}}
     "age":35
 }
 
-### Put Employee By Id
-PUT http://{{host}}/employee/6496a4a47b42c236e0507d8a
+### Put Movie By Id
+PUT http://{{host}}/{{path}}/6496a4a47b42c236e0507d8a
 Content-Type: {{contentType}}
 
 {
@@ -31,6 +32,6 @@ Content-Type: {{contentType}}
     "age":35
 }
 
-### Delete Employee By Id
-DELETE  http://{{host}}/employee/6496a9be91711e8b54654579
+### Delete Movie By Id
+DELETE  http://{{host}}/{{path}}/6496a9be91711e8b54654579
 Content-Type: {{contentType}}
